@@ -1,0 +1,17 @@
+<h1>Products#index</h1> 
+
+<%= link_to "New Product", "/products/new" %>
+
+<% if current_user %>
+<% user= current_user %>
+<%= link_to "View My Profile", user_path(user.id) %>
+<% end %>
+
+<ul>
+<% @products.each do |product| %>
+  <li> <p> <%= link_to product[:name], product_path(product.id) %> </p> <p><%= product[:description] %></p> <p><%= product[:category] %></p> 
+  	<p>Price: $<%= product.formatted_price %></p>
+  </li>
+
+<% end %>
+</ul>

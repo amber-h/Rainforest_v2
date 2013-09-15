@@ -1,0 +1,21 @@
+<h1>Photogur </h1>
+<h2>Edit a product</h2>
+
+<%= link_to "Back to Products", products_url %>
+<%= form_for @product do |f| %>
+  <p>
+    <%= f.label "Name" %><br>
+    <%= f.text_field "name" %>
+  </p>
+  <p>
+    <%= f.label "Description" %><br>
+    <%= f.text_field "description" %>
+  </p>
+  <p>
+    <%= f.label "Price in Cents" %><br>
+    <%= f.text_field "price_in_cents" %>
+  </p>
+  <p>
+    <%= f.submit "Save" %> 
+  </p>
+<% end %>
