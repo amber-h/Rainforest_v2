@@ -226,6 +226,23 @@ img:hover {
 
 }
 
+.sign-up-link:link{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 0.7em;
+}
+
+.sign-up-link:visited{
+	text-decoration: none;
+	color:#FFFFFF;
+}
+
+.sign-up-link:hover{
+	text-decoration: none;
+	color:#FFFFFF;
+	font-size: 1.1em;
+}
+
 .blue-box {
 	margin: 0 auto;
 	width: 80%;
