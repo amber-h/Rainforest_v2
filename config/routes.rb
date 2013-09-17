@@ -1,24 +1,10 @@
 Rainforest::Application.routes.draw do
-  match '/rate' => 'rater#create', :as => 'rate'
+  # match '/rate' => 'rater#create', :as => 'rate'
 
   
-  root :to => 'welcome#index' 
-  
-  # get "reviews/show"
-
-  # get "reviews/new"
-
-  # get "reviews/edit"
-
-  # get "sessions/new"
-
-  # get "sessions/create"
-
-  # get "sessions/destroy"
-
-  # get "users/new"
-
-  # get "users/create"
+  # root :to => 'welcome#index'
+  get "/login" => "sessions#new"
+  root :to => "users#new"
 
   resources :products do 
     resources :reviews, :except => [:index]

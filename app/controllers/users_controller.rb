@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout 'static', :only => [:new]
+  
   def new
   	@user= User.new
   end

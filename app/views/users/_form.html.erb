@@ -1,0 +1,42 @@
+<%= form_tag users_path do %>
+  <div class="actions-bigger-btn"><%=submit_tag 'Sign Up' %></div>
+
+    <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class= "form-signup-left">
+           	<div class="field"> 
+           		<%= text_field_tag :name, params[:name], {placeholder: 'Name'} %>
+          	</div> 
+          	<div class="field">
+  				<%= text_field_tag :email, params[:email], {placeholder: 'Email'} %>
+  			</div>
+        
+  </div>
+  <div class= "form-signup-right">
+  			<div class="field">
+   			<%= password_field_tag :password, value=nil , {placeholder: 'Password'}%>
+  		</div>
+          <div class="field">
+          	<%= password_field_tag :password_confirmation, value=nil , {placeholder: 'Password Confirmation'}%>
+          </div>
+          <div class="field">
+            <%#= f.label :photo_url %><br/>
+            <%#= f.text_field :photo_url %>
+          </div>
+    </div>
+       
+<% end %>
+
+
+
+
+ 
+  

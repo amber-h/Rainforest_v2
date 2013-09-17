@@ -23,6 +23,45 @@ time, mark, audio, video {
 }
 
 
+.landing-page {
+	background: url(rainforest_background.jpg) no-repeat center center fixed; 
+  	background-size: cover;
+
+   /* background: black;
+    display: block;
+    transition: opacity .3s linear;*/
+
+}
+
+
+/*.landing-page:hover {
+    opacity: .5;
+}*/
+
+/* .wrap {
+    overflow: hidden;
+    margin: auto;
+}
+
+.tint {
+	overflow: hidden;
+	background: blue;
+	margin: 0 20px 20px 0;
+  }*/
+
+/*img {
+    float: left;
+    background: black;
+    display: block;
+    transition: opacity .3s linear;
+}
+img:hover {
+    opacity: .5;
+    cursor: pointer;
+}*/
+  
+
+
 .field {
 	font-size: 24px;
 	color: #000;
@@ -40,21 +79,21 @@ time, mark, audio, video {
 .field input{
 	height: 50px;
 	width: 290px;
-	border-color: #686868;
+	/*border-color: #686868;*/
+	border-color: #0099CC;
 	border-radius: 15px;
 	background-color: #808080;
 	opacity: 0.7;
 	color: #FFF;
 	font-size: 24px;
 	font-weight: bold;
+	text-align: center;
 }
 
 .field:hover input{
 	opacity: 0.95;
 
 }
-
-
 
 .actions input{
 	box-shadow:inset 0px 1px 0px 0px #cae3fc;
@@ -95,10 +134,46 @@ time, mark, audio, video {
 .actions:hover input{
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
 	background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4197ee', endColorstr='#79bbff');
 	background-color:#4197ee;
-	 cursor: pointer;
+	cursor: pointer;
 }.actions:active input{
+	position:relative;
+	top:1px;
+}
+
+.actions-bigger-btn input{
+	box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	background-color:#79bbff;
+	border-top-left-radius:17px;
+	border-top-right-radius:17px;
+	border-bottom-right-radius:17px;
+	border-bottom-left-radius:17px;
+	text-indent:0;
+	border:1px solid #469df5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:30px;
+	font-weight:bold;
+	font-style:normal;
+	height:80px;
+	line-height:80px;
+	width:200px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #287ace;
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+
+}
+
+.actions-bigger-btn:hover input{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
+	background-color:#4197ee;
+	cursor: pointer;
+}.actions-bigger-btn:active input{
 	position:relative;
 	top:1px;
 }
@@ -137,6 +212,18 @@ time, mark, audio, video {
 	font-size: 0.3em;
 	color: #FFFFFF;
 	text-align: center;
+}
+
+.form-signup-left{
+	float: left;
+	margin-left: 15%;
+
+}
+
+.form-signup-right{
+	float: right;
+	margin-right: 15%;
+
 }
 
 .blue-box {
