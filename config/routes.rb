@@ -1,6 +1,9 @@
 Rainforest::Application.routes.draw do
   match '/rate' => 'rater#create', :as => 'rate'
 
+  
+  root :to => 'welcome#index' 
+  
   # get "reviews/show"
 
   # get "reviews/new"
@@ -26,8 +29,8 @@ Rainforest::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-
-  root :to => "products#index"       
+  # root :controller => 'welcome', :action => :index
+       
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

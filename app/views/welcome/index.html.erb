@@ -1,0 +1,24 @@
+<html class="landing-page">
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Rainforest</title>
+    <%= stylesheet_link_tag "welcome" %>
+</head>
+<body>
+
+
+   <div id="container">
+
+        <h1>Rainforest</h1>
+
+        <% if current_user %>
+            <% redirect_to %>
+        <% else %>
+            <%= render '/sessions/form' %>
+        <% end %>
+    </div>
+ 
+
+</body>
+</html>
+
