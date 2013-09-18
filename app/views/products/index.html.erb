@@ -9,7 +9,7 @@
 
 <ul>
 <% @products.each do |product| %>
-  <li> <p> <%= link_to product[:name], product_path(product.id) %> </p> <p><%= product[:description] %></p> <p><%= product[:category] %></p> 
+  <li> <p> <%= link_to product[:name], product %> </p> <p><%= product[:description] %></p> <p><%= product[:category] %></p> 
   	<p>Price: $<%= product.formatted_price %></p>
   </li>
 

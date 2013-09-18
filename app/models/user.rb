@@ -4,7 +4,11 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_presence_of :name
 
+  has_and_belongs_to_many :products, :join_table => 'votes'
+
   has_many :reviews
-  has_many :products, :through => :reviews 
+  # has_many :products, :through => :reviews 
+
+  
 
 end

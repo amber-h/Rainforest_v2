@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_filter :ensure_logged_in, :only => [:show]
-  before_filter :get_product, :only => [:show, :edit, :destroy, :update]
+  before_filter :get_product, :only => [:show, :edit, :destroy, :update, :vote, :unvote]
 
   def index
   	@products = Product.all
@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @reviews = @product.reviews.order("created_at DESC")
+     @reviews = @product.reviews.order("created_at DESC")
 
     if current_user
       @review = @product.reviews.build
@@ -69,6 +69,17 @@ end
       format.html { redirect_to products_url }
       format.json { head :no_content }
     end
+  end
+
+  def vote
+
+    @product.users << current_user if !@product.users.include?(current_user)
+    redirect_to @product 
+  end
+
+  def unvote
+    @product.users.destroy(current_user)
+    redirect_to @product 
   end
 
   private

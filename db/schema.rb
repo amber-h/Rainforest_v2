@@ -13,6 +13,17 @@
 
 ActiveRecord::Schema.define(:version => 20130912030408607) do
 
+  create_table "likes", :force => true do |t|
+    t.string   "liker_type"
+    t.integer  "liker_id"
+    t.string   "likeable_type"
+    t.integer  "likeable_id"
+    t.datetime "created_at"
+  end
+
+  add_index "likes", ["likeable_id", "likeable_type"], :name => "fk_likeables"
+  add_index "likes", ["liker_id", "liker_type"], :name => "fk_likes"
+
   create_table "products", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -63,6 +74,11 @@ ActiveRecord::Schema.define(:version => 20130912030408607) do
     t.datetime "updated_at",      :null => false
     t.string   "name"
     t.string   "photo_url"
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer "product_id"
+    t.integer "user_id"
   end
 
 end
